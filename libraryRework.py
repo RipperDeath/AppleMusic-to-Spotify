@@ -8,9 +8,9 @@ class XmlLibraryParser:
         self.libraryToJson()
         self.playlistToJson()
 
-    def xmlToJson(self, path) -> object:
+    def xmlToJson(self) -> object:
         #c0nert xml to json
-        with open(path) as fd:
+        with open(self.path) as fd:
             doc = xmltodict.parse(fd.read())
             rawTrackList = doc['plist']['dict']['dict']
             playlistTackId = doc['plist']['dict']['array']
