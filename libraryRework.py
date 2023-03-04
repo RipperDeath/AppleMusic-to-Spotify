@@ -5,8 +5,8 @@ class XmlLibraryParser:
     def __init__(self, path):
         self.path = path
         self.xmlToJson(self.path)
-        self.libraryToJson()
-        self.playlistToJson()
+        #self.libraryToJson()
+        #self.playlistToJson()
 
     def xmlToJson(self) -> object:
         #c0nert xml to json
@@ -67,4 +67,5 @@ class XmlLibraryParser:
 if __name__ == '__main__':
     #path = os.environ['HOME'] + '/documents/Library.xml'
     XmlLibraryParser(sys.argv[1])
-    #XmlLibraryParser(sys.argv[1])
+    XmlLibraryParser.libraryToJson()
+    XmlLibraryParser.playlistToJson()
