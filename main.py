@@ -41,7 +41,7 @@ args = parser.parse_args()
 class SpotifyLibraryConvert:
     def __init__(self, path):
         self.path = path
-        
+   
     def addToLibrary(self):
         data = XmlLibraryParser(self.path).libraryToJson()
         songIdList = []
