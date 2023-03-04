@@ -64,7 +64,6 @@ class XmlLibraryParser:
 
         return playlistSongs
 
-
 if __name__ == '__main__':
     #path = os.environ['HOME'] + '/documents/Library.xml'
     XmlLibraryParser(sys.argv[1])
