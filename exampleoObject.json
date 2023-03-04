@@ -1,0 +1,52 @@
+{
+    "playlists": {
+        "\u201990s R&B Essentials": [
+            {
+                "song": "You Make Me Wanna...",
+                "artist": "Usher"
+            },
+            {
+                "song": "One In A Million",
+                "artist": "Aaliyah"
+            },
+            {
+                "song": "Say My Name (Mixed)",
+                "artist": "Destiny's Child"
+            },
+            {
+                "song": "Return of the Mack",
+                "artist": "Mark Morrison"
+            },
+            {
+                "song": "No Diggity (feat. Dr. Dre & Queen Pen)",
+                "artist": "Blackstreet"
+            },
+            {
+                "song": "This Is How We Do It",
+                "artist": "Montell Jordan"
+            }
+        ],
+        "Car playlist": [
+            {
+                "song": "The Chat",
+                "artist": "Mild High Club"
+            },
+            {
+                "song": "So Over You",
+                "artist": "Ashanti"
+            },
+            {
+                "song": "Represent",
+                "artist": "Nas"
+            },
+            {
+                "song": "A Dozen Roses (You Remind Me)",
+                "artist": "Monica"
+            },
+            {
+                "song": "I Wonder",
+                "artist": "Kanye West"
+            }
+        ]
+    }
+}

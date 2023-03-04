@@ -1,0 +1,6 @@
+1. get playlists from document. // DONE
+2. use same document to get tracks and playlists. // DONE
+3. reduce to use no or one file for all tracking to remove clutter in working folder and speed up flow. // DONE
+4. have class functions in tracksFromAP.py return objects instead so we can just parse in the actual convert of media. // DONE
+5. make exec command-lineable
+6. 
