@@ -1,12 +1,25 @@
+import os
 import sys
 import xmltodict
- 
+
 class XmlLibraryParser:
-    def __init__(self, path):
-        self.path = path
-        self.xmlToJson(self.path)
-        #self.libraryToJson()
-        #self.playlistToJson()
+    def __init__(self):
+        #detect if os is windows or mac
+        if sys.platform == 'win32':
+            try:
+                self.path = os.environ['USERPROFILE'] + '\\Music\\iTunes\\Library.xml'
+            except:
+                print('iTunes library not found, please make sure You export your library to xml')
+                sys.exit()
+        elif sys.platform == 'darwin':
+            try:
+                self.path = os.environ['HOME'] + '/documents/Library.xml'
+            except:
+                print('iTunes library not found, please make sure You export your library to xml')
+                sys.exit()
+        else:
+            print('OS not supported')
+            sys.exit()
 
     def xmlToJson(self) -> object:
         #c0nert xml to json
@@ -19,7 +32,8 @@ class XmlLibraryParser:
 
 
     def libraryToJson(self) -> object:
-        rawTrackList, playlistTackId = self.xmlToJson(self.path)
+        rawTrackList, playlistTackId = self.xmlToJson()
+        #print('converted xml to json')
         #get the dict from rawTrackList
         dict = rawTrackList['dict']
         #loop through all indexes in dict
@@ -66,6 +80,6 @@ class XmlLibraryParser:
 
 if __name__ == '__main__':
     #path = os.environ['HOME'] + '/documents/Library.xml'
-    XmlLibraryParser(sys.argv[1])
+    XmlLibraryParser()
     XmlLibraryParser.libraryToJson()
     XmlLibraryParser.playlistToJson()
